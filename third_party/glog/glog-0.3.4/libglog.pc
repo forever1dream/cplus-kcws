@@ -1,0 +1,10 @@
+prefix=/home/sunxx/work/tensorflow/cplus-kcws/third_party/glog/glog-0.3.4
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libglog
+Description: Google Log (glog) C++ logging framework
+Version: 0.3.3
+Libs: -L${libdir} -lglog
+Cflags: -I${includedir}
