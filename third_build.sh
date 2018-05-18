@@ -13,6 +13,9 @@ cd glog/glog-0.3.4
 make clean;make install
 mv include ../
 mv lib ../
+cd ..
+cd lib 
+rm -rf *.so*
 cd ../../
 
 cd gflags/gflags-2.0
@@ -20,5 +23,8 @@ cd gflags/gflags-2.0
 make clean;make install
 mv include ../
 mv lib ../
+cd ..
+cd lib 
+rm -rf *.so*
 cd ../../
 

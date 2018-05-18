@@ -4,6 +4,8 @@ set -e -x
 
 rm -rf seg_backend_api
 
+rm -rf tensor_decode/models
+
 cd third_party/
 
 cd glog
