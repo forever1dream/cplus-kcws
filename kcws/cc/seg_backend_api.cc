@@ -22,11 +22,11 @@
 #include "tensorflow/core/platform/init_main.h"
 
 DEFINE_int32(port, 9090, "the  api serving binding port");
-DEFINE_string(model_path, "tensor_decode/models/seg_model.pbtxt", "the model path");
-DEFINE_string(vocab_path, "tensor_decode/models/basic_vocab.txt", "char vocab path");
-DEFINE_string(pos_model_path, "tensor_decode/models/pos_model.pbtxt", "the pos tagging model path");
-DEFINE_string(word_vocab_path, "tensor_decode/models/word_vocab.txt", "word vocab path");
-DEFINE_string(pos_vocab_path, "tensor_decode/models/pos_vocab.txt", "pos vocab path");
+DEFINE_string(model_path, "kcws/models/seg_model.pbtxt", "the model path");
+DEFINE_string(vocab_path, "kcws/models/basic_vocab.txt", "char vocab path");
+DEFINE_string(pos_model_path, "kcws/models/pos_model.pbtxt", "the pos tagging model path");
+DEFINE_string(word_vocab_path, "kcws/models/word_vocab.txt", "word vocab path");
+DEFINE_string(pos_vocab_path, "kcws/models/pos_vocab.txt", "pos vocab path");
 DEFINE_int32(max_sentence_len, 80, "max sentence len ");
 DEFINE_string(user_dict_path, "", "user dict path");
 DEFINE_int32(max_word_num, 50, "max num of word per sentence ");
