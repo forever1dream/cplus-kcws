@@ -768,7 +768,7 @@ configure: failed program was:
 configure:17152: result: no
 configure:17024: checking whether pthreads work without any flags
 configure:17122: gcc -o conftest -g -O2    conftest.c   >&5
-/tmp/ccfPMiDl.o: In function `main':
+/tmp/ccj9jeDf.o: In function `main':
 /home/sunxx/work/tensorflow/cplus-kcws/third_party/gflags/gflags-2.0/conftest.c:33: undefined reference to `pthread_join'
 /home/sunxx/work/tensorflow/cplus-kcws/third_party/gflags/gflags-2.0/conftest.c:34: undefined reference to `__pthread_register_cancel'
 /home/sunxx/work/tensorflow/cplus-kcws/third_party/gflags/gflags-2.0/conftest.c:35: undefined reference to `pthread_create'
@@ -968,7 +968,7 @@ configure:17421: $? = 0
 configure:17442: result: yes
 configure:17592: checking whether what we have so far is sufficient with -nostdlib
 configure:17620: gcc -o conftest -nostdlib -shared -fPIC -Wl,-z,defs -g -O2 -pthread   conftest.c   -lc >&5
-/tmp/ccqLVS26.o: In function `main':
+/tmp/ccQYT2WB.o: In function `main':
 /home/sunxx/work/tensorflow/cplus-kcws/third_party/gflags/gflags-2.0/conftest.c:33: undefined reference to `pthread_join'
 /home/sunxx/work/tensorflow/cplus-kcws/third_party/gflags/gflags-2.0/conftest.c:34: undefined reference to `__pthread_register_cancel'
 /home/sunxx/work/tensorflow/cplus-kcws/third_party/gflags/gflags-2.0/conftest.c:35: undefined reference to `pthread_create'

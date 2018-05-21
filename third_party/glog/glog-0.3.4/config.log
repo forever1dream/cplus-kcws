@@ -1067,7 +1067,7 @@ configure:15787: $? = 0
 configure:15787: result: yes
 configure:15794: checking for dladdr
 configure:15794: g++ -o conftest -g -O2   conftest.cpp  >&5
-/tmp/ccWUZaJj.o: In function `main':
+/tmp/ccxxSggT.o: In function `main':
 /home/sunxx/work/tensorflow/cplus-kcws/third_party/glog/glog-0.3.4/conftest.cpp:70: undefined reference to `dladdr'
 collect2: error: ld returned 1 exit status
 configure:15794: $? = 1
@@ -1232,7 +1232,7 @@ configure: failed program was:
 configure:16219: result: no
 configure:16122: checking whether pthreads work without any flags
 configure:16210: gcc -o conftest -g -O2    conftest.c   >&5
-/tmp/cc3Bk49N.o: In function `main':
+/tmp/ccVAdmJm.o: In function `main':
 /home/sunxx/work/tensorflow/cplus-kcws/third_party/glog/glog-0.3.4/conftest.c:46: undefined reference to `pthread_join'
 /home/sunxx/work/tensorflow/cplus-kcws/third_party/glog/glog-0.3.4/conftest.c:47: undefined reference to `__pthread_register_cancel'
 /home/sunxx/work/tensorflow/cplus-kcws/third_party/glog/glog-0.3.4/conftest.c:48: undefined reference to `pthread_create'

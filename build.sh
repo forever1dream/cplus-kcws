@@ -2,8 +2,8 @@
 
 set -e -x
 
-g++ -std=c++11 -o seg_backend_api ./tensor_decode/cc/seg_backend_api.cc \
-			  ./tensor_decode/cc/pos_tagger.cc ./tensor_decode/cc/sentence_breaker.cc ./tensor_decode/cc/tf_seg_model.cc ./tensor_decode/cc/viterbi_decode.cc \
+g++ -std=c++11 -o seg_backend_api ./kcws/cc/seg_backend_api.cc \
+			  ./kcws/cc/pos_tagger.cc ./kcws/cc/sentence_breaker.cc ./kcws/cc/tf_seg_model.cc ./kcws/cc/viterbi_decode.cc \
 			  ./utils/basic_vocab.cc ./utils/jsonxx.cc ./utils/py_word2vec_vob.cc ./utils/word2vec_vob.cc \
 			  ./tfmodel/tfmodel.cc \
 			  -g -Wall -D_DEBUG -Wshadow -Wno-sign-compare -w -Xlinker -export-dynamic \
