@@ -4,7 +4,7 @@ set -e -x
 
 rm -rf seg_backend_api
 
-rm -rf tensor_decode/models
+rm -rf kcws/models
 
 cd third_party/
 

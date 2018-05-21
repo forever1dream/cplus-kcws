@@ -2,7 +2,7 @@
 
 set -e -x
 
-cd tensor_decode
+cd kcws
 tar -xvf models.tar.gz
 cd ..
 
