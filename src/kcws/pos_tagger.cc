@@ -280,6 +280,7 @@ bool PosTagger::Tag(const std::vector<std::vector<std::string>>& sentences,
     }
     for (; i < nn; i++) {
       const std::string& w = sentence[i];
+      std::cout << "word:" << w << std::endl;
       WordInfo info;
       BuildWordInfo(w, info);
       input_tensor_w_mapped(k, i) = info.idx;

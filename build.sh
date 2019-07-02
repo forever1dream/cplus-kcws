@@ -2,21 +2,23 @@
 
 set -e -x
 
-g++ -std=c++11 -o seg_backend_api ./kcws/cc/seg_backend_api.cc \
-			  ./kcws/cc/pos_tagger.cc ./kcws/cc/sentence_breaker.cc ./kcws/cc/tf_seg_model.cc ./kcws/cc/viterbi_decode.cc \
-			  ./utils/basic_vocab.cc ./utils/jsonxx.cc ./utils/py_word2vec_vob.cc ./utils/word2vec_vob.cc \
-			  ./tfmodel/tfmodel.cc \
+g++ -std=c++11 -o seg_backend_api ./src/kcws/seg_backend_api.cc \
+			  ./src/kcws/pos_tagger.cc ./src/kcws/sentence_breaker.cc ./src/kcws/tf_seg_model.cc ./src/kcws/viterbi_decode.cc \
+			  ./src/utils/basic_vocab.cc ./src/utils/jsonxx.cc ./src/utils/py_word2vec_vob.cc ./src/utils/word2vec_vob.cc \
+			  ./src/tfmodel/tfmodel.cc \
 			  -g -Wall -D_DEBUG -Wshadow -Wno-sign-compare -w -Xlinker -export-dynamic \
 			  -I../tensorflow/ \
-			  -I./kcws/cc/ \
-			  -I./utils/ \
-			  -I./tfmodel/ \
+			  -I./include/ \
+			  -I./include/kcws/ \
+			  -I./include/utils/ \
+			  -I./include/tfmodel/ \
 			  -I./third_party/gflags/include/ \
 			  -I./third_party/glog/include/ \
 			  -I/home/sunxx/soft/boost/include/ \
 			  -I/usr/include/python2.7/ \
 			  -I../tensorflow/tensorflow/contrib/makefile/gen/proto \
 			  -I../tensorflow/tensorflow/contrib/makefile/downloads/eigen \
+			  -I../tensorflow/tensorflow/contrib/makefile/downloads/absl/ \
 			  -I../tensorflow/tensorflow/contrib/makefile/gen/protobuf/include \
 			  -I../tensorflow/tensorflow/contrib/makefile/downloads/nsync/public/ \
               -L../tensorflow/bazel-bin/tensorflow -ltensorflow_cc \

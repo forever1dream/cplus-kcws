@@ -5,8 +5,10 @@
  * Description:
  *
  */
+
 #ifndef KCWS_TF_SEG_MODEL_H_
 #define KCWS_TF_SEG_MODEL_H_
+
 #include <string>
 #include <vector>
 #include <memory>
@@ -14,6 +16,7 @@
 #include "basic_string_util.h"
 #include "basic_vocab.h"
 #include "ac_scanner.h"
+
 namespace tf {
 
 class TfModel;

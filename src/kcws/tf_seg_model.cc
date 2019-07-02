@@ -246,19 +246,45 @@ bool TfSegModel::LoadModel(const std::string& modelPath,const std::string& vocab
 	}
 	max_sentence_len_ = maxSentenceLen;
 
+    //create input tensor
 	std::vector<tensorflow::Tensor> trans_tensors;
 	std::vector<std::string> output_names({FLAGS_TRANSITION_NODE_NAME});
+	//std::vector<std::string> output_names({"score/my_output"});
+    
+    std::vector<std::pair<std::string, tensorflow::Tensor> > inputTensors;
 
+    tensorflow::Tensor keep_prob(tensorflow::DT_FLOAT, tensorflow::TensorShape({1}));
+    keep_prob.vec<float>()(0) = 1.0f;
+
+    std::vector<int> x = {346, 246, 28, 2795, 777, 83, 102, 533, 1100, 18, 584, 410, 1049, 884, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int ndim = x.size();
+    tensorflow::Tensor input_x(tensorflow::DT_INT32, tensorflow::TensorShape({1, 30}));
+    auto x_map = input_x.tensor<int, 2>();
+    for (int j = 0; j < ndim; j++) {
+        x_map(0, j) = x[j];
+    }
+
+    inputTensors.push_back(std::pair<std::string, tensorflow::Tensor>("input_x", input_x)); 
+    inputTensors.push_back(std::pair<std::string, tensorflow::Tensor>("keep_prob", keep_prob));
+
+	//if (!model_->Eval(inputTensors, output_names, trans_tensors)) {
 	if (!model_->Eval({}, output_names, trans_tensors)) {
 		LOG(ERROR) << "Error during get trans tensors: ";
 		return false;
 	}
-  
+
+    //get output res
 	VLOG(0) << "Reading from layer " << output_names[0];
 	tensorflow::Tensor* output = &trans_tensors[0];
 	const Eigen::TensorMap<Eigen::Tensor<float, 1, Eigen::RowMajor>,
 		  Eigen::Aligned>& prediction = output->flat<float>();
 	const int count = prediction.size();
+    for (int i = 0; i < count; ++i) {
+        const float value = prediction(i);
+        std::cout << i << ":" << value << std::endl;
+        // value是该张量以一维数组表示时在索引i处的值。
+    }
+
 	num_tags_ = static_cast<int>(std::sqrt(count) + 0.01);
 	VLOG(0) << "got num tag:" << num_tags_;
 
