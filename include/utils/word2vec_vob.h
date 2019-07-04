@@ -12,7 +12,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "utils/vocab.h"
+#include "vocab.h"
 
 namespace utils {
 struct WV;

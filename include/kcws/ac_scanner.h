@@ -20,7 +20,7 @@
 #include <cstdio>
 #include <utility>
 
-#include "base/base.h"
+#include "base.h"
 
 using std::queue;
 using std::unordered_map;

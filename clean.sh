@@ -3,6 +3,7 @@
 set -e -x
 
 rm -rf seg_backend_api
+rm -rf tensorflow_test
 
 rm -rf kcws/models
 

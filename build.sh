@@ -2,6 +2,8 @@
 
 set -e -x
 
+rm -rf seg_backend_api
+
 g++ -std=c++11 -o seg_backend_api \
                 ./src/kcws/seg_backend_api.cc \
                 ./src/kcws/pos_tagger.cc \
@@ -15,7 +17,7 @@ g++ -std=c++11 -o seg_backend_api \
                 ./src/tfmodel/tfmodel.cc \
                 -g -Wall -D_DEBUG -Wshadow -Wno-sign-compare -w -Xlinker -export-dynamic \
                 -I../tensorflow/ \
-                -I./include/ \
+                -I./include/base/ \
                 -I./include/kcws/ \
                 -I./include/utils/ \
                 -I./include/tfmodel/ \

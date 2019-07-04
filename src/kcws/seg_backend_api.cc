@@ -13,7 +13,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "base/base.h"
+#include "base.h"
 #include "jsonxx.h"
 #include "basic_string_util.h"
 #include "tf_seg_model.h"

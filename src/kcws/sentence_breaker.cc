@@ -7,8 +7,9 @@
  * Description:
  *
  */
+
 #include "sentence_breaker.h"  //NOLINT
-#include "base/base.h"
+#include "base.h"
 
 
 namespace kcws {

@@ -9,10 +9,11 @@
 #include <ctime>
 #include <random>
 #include <cmath>
-#include "utils/basic_string_util.h"
-#include "utils/word2vec_vob.h"
-#include "base/base.h"
+#include "basic_string_util.h"
+#include "word2vec_vob.h"
+#include "base.h"
 // #include "re2/re2.h"
+
 namespace utils {
 
 

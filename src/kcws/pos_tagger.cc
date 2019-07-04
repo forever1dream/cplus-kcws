@@ -7,7 +7,7 @@
  * Description:
  *
  */
-#include "base/base.h"
+#include "base.h"
 
 #include "pos_tagger.h"
 #include "viterbi_decode.h"

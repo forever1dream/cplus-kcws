@@ -2,9 +2,10 @@
 #include <ctime>
 #include <random>
 #include <cmath>
-#include "base/base.h"
+#include "base.h"
 #include "basic_string_util.h"
 #include "basic_vocab.h"
+
 namespace utils {
 
 namespace {

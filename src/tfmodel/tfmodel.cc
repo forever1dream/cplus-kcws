@@ -8,11 +8,11 @@
  *
  */
 
-#include "tfmodel/tfmodel.h"
+#include "tfmodel.h"
 
 #include <fstream>
 
-#include "base/base.h"
+#include "base.h"
 #include "basic_string_util.h"
 
 #include "google/protobuf/io/coded_stream.h"
