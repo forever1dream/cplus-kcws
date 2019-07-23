@@ -23,6 +23,7 @@ g++ -std=c++11 -o seg_backend_api \
                 -I./include/tfmodel/ \
                 -I./third_party/gflags/include/ \
                 -I./third_party/glog/include/ \
+                -I./ \
                 -I/home/sunxx/soft/boost/include/ \
                 -I/usr/include/python2.7/ \
                 -I../tensorflow/tensorflow/contrib/makefile/gen/proto \
